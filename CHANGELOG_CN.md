@@ -2,6 +2,10 @@
 
 > English documentation: [CHANGELOG.md](CHANGELOG.md)
 
+## 0.6.0
+
+- 以统一的 `0.6.0` 版本重新构建并发布 iOS XCFramework 制品。
+
 ## 0.5.0
 
 - Jolibox Ad Mediation iOS 首个公开二进制 Swift Package 版本。
