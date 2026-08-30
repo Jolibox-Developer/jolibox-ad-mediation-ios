@@ -2,6 +2,11 @@
 
 > English documentation: [CHANGELOG.md](CHANGELOG.md)
 
+## 0.6.1
+
+- 重新发布已验证的 XCFramework，并移除本机构建路径元数据。
+- 补齐 Swift Package Manager 所需的可下载 GitHub Release 制品。
+
 ## 0.6.0
 
 - 以统一的 `0.6.0` 版本重新构建并发布 iOS XCFramework 制品。

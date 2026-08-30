@@ -7,13 +7,13 @@ Binary-only Swift Package distribution of the Jolibox Ad Mediation iOS SDK.
 ## Install with Swift Package Manager
 
 In Xcode, add this repository as a package dependency and select the exact
-`0.6.0` release. In a `Package.swift` manifest:
+`0.6.1` release. In a `Package.swift` manifest:
 
 ```swift
 dependencies: [
     .package(
         url: "https://github.com/Jolibox-Developer/jolibox-ad-mediation-ios.git",
-        exact: "0.6.0"
+        exact: "0.6.1"
     ),
 ],
 targets: [
@@ -38,7 +38,7 @@ to source control.
 
 ## Binary verification
 
-The `0.6.0` release contains `JoliboxAdMediation.xcframework.zip`. Its Swift
+The `0.6.1` release contains `JoliboxAdMediation.xcframework.zip`. Its Swift
 Package checksum is recorded in [Package.swift](Package.swift), and its SHA-256
 sidecar is attached to the release.
 

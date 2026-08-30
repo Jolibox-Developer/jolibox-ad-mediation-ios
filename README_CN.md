@@ -6,14 +6,14 @@ Jolibox Ad Mediation iOS SDK 的仅二进制 Swift Package 分发仓库。
 
 ## 通过 Swift Package Manager 接入
 
-在 Xcode 中添加本仓库为 Package Dependency，并选择精确的 `0.6.0` Release。在
+在 Xcode 中添加本仓库为 Package Dependency，并选择精确的 `0.6.1` Release。在
 `Package.swift` 中可使用：
 
 ```swift
 dependencies: [
     .package(
         url: "https://github.com/Jolibox-Developer/jolibox-ad-mediation-ios.git",
-        exact: "0.6.0"
+        exact: "0.6.1"
     ),
 ],
 targets: [
@@ -37,7 +37,7 @@ targets: [
 
 ## 二进制校验
 
-`0.6.0` Release 包含 `JoliboxAdMediation.xcframework.zip`。其 Swift Package
+`0.6.1` Release 包含 `JoliboxAdMediation.xcframework.zip`。其 Swift Package
 校验和记录在 [Package.swift](Package.swift)，SHA-256 校验文件也随 Release 提供。
 
 ## 许可证
