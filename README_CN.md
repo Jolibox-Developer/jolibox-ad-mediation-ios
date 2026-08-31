@@ -15,12 +15,20 @@ dependencies: [
         url: "https://github.com/Jolibox-Developer/jolibox-ad-mediation-ios.git",
         exact: "0.6.1"
     ),
+    .package(
+        url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+        exact: "12.1.0"
+    ),
 ],
 targets: [
     .target(
         name: "YourTarget",
         dependencies: [
-            .product(name: "JoliboxAdMediation", package: "jolibox-ad-mediation-ios")
+            .product(name: "JoliboxAdMediation", package: "jolibox-ad-mediation-ios"),
+            .product(
+                name: "GoogleMobileAds",
+                package: "swift-package-manager-google-mobile-ads"
+            ),
         ]
     ),
 ]
@@ -30,10 +38,43 @@ targets: [
 
 - iOS 13.0 及以上
 - Xcode / Swift Package Manager（Swift tools 5.9 及以上）
+- Google Mobile Ads SDK 严格使用 `12.1.0`
 - 在宿主应用 `Info.plist` 中配置 Google Mobile Ads App ID
 
-请在应用启动阶段完成一次 SDK 初始化，再加载广告。Jolibox 的接入配置会单独
-提供，不能提交到源码仓库。
+`0.6.1` XCFramework 使用 Xcode `26.4` 完成构建验收。Swift tools `5.9` 是
+Package Manifest 的最低要求；其他 Xcode 版本未经单独测试时，不作已验收承诺。
+
+二进制 framework 会导入 `GoogleMobileAds`，所以宿主 target 必须同时加入上面所示的
+Google Mobile Ads package product；只解析 Jolibox package 并不是完整接入。
+
+在宿主 `Info.plist` 中配置 AdMob App ID。App ID 包含 `~`，不要误填包含 `/` 的
+广告位 ID。
+
+```xml
+<key>GADApplicationIdentifier</key>
+<string>YOUR_IOS_ADMOB_APP_ID</string>
+```
+
+请在应用启动阶段完成一次 SDK 初始化，并且只在初始化成功后启用广告加载。下方接入参数会
+单独提供，不能提交到源码仓库。
+
+```swift
+import JoliboxAdMediation
+
+JoliboxAds.initialize(
+    joliSource: "YOUR_JOLI_SOURCE",
+    environment: .staging
+) { result in
+    switch result {
+    case .success:
+        // 启用广告加载。
+        break
+    case .failure(let error):
+        // 保持广告加载禁用，并上报 error.code。
+        break
+    }
+}
+```
 
 ## 二进制校验
 
