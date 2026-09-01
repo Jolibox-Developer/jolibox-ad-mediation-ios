@@ -2,6 +2,11 @@
 
 > 中文说明：[CHANGELOG_CN.md](CHANGELOG_CN.md)
 
+## 0.6.4
+
+- Removes the stale archive-time code signature after adding distributable Swift interfaces, allowing each host to apply a fresh embedding signature.
+- Keeps the path-clean binary slices and public Swift interfaces from `0.6.3` unchanged.
+
 ## 0.6.3
 
 - Removes compiler-only ABI metadata that retained escaped local source paths.
