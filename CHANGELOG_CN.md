@@ -2,6 +2,11 @@
 
 > English documentation: [CHANGELOG.md](CHANGELOG.md)
 
+## 0.6.2
+
+- 重新构建 XCFramework，移除序列化的本机构建路径，同时保留设备、arm64 模拟器和 x86_64 模拟器支持。
+- 发布不含 `__MACOSX`、`.DS_Store` 或 AppleDouble 条目的干净 ZIP，并提供匹配的 SHA-256 校验文件。
+
 ## 0.6.1
 
 - 重新发布已验证的 XCFramework，并移除本机构建路径元数据。

@@ -2,6 +2,11 @@
 
 > 中文说明：[CHANGELOG_CN.md](CHANGELOG_CN.md)
 
+## 0.6.2
+
+- Rebuilds the XCFramework without serialized local build paths while retaining device, arm64 Simulator, and x86_64 Simulator support.
+- Publishes a clean ZIP without `__MACOSX`, `.DS_Store`, or AppleDouble entries and provides a matching SHA-256 sidecar.
+
 ## 0.6.1
 
 - Republishes the verified XCFramework with local build-path metadata removed.
