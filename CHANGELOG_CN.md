@@ -2,6 +2,11 @@
 
 > English documentation: [CHANGELOG.md](CHANGELOG.md)
 
+## 0.6.3
+
+- 移除仍包含转义本地源码路径、且宿主接入不需要的编译器 ABI 元数据。
+- 保持已验证的真机、arm64 模拟器、x86_64 模拟器二进制切片及可分发 Swift 接口不变。
+
 ## 0.6.2
 
 - 重新构建 XCFramework，移除序列化的本机构建路径，同时保留设备、arm64 模拟器和 x86_64 模拟器支持。

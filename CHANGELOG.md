@@ -2,6 +2,11 @@
 
 > 中文说明：[CHANGELOG_CN.md](CHANGELOG_CN.md)
 
+## 0.6.3
+
+- Removes compiler-only ABI metadata that retained escaped local source paths.
+- Keeps the verified device, arm64 Simulator, and x86_64 Simulator binary slices and distributable Swift interfaces unchanged.
+
 ## 0.6.2
 
 - Rebuilds the XCFramework without serialized local build paths while retaining device, arm64 Simulator, and x86_64 Simulator support.
