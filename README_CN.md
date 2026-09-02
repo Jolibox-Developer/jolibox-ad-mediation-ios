@@ -6,18 +6,18 @@ Jolibox Ad Mediation iOS SDK 的仅二进制 Swift Package 分发仓库。
 
 ## 通过 Swift Package Manager 接入
 
-在 Xcode 中添加本仓库为 Package Dependency，并选择精确的 `0.6.4` Release。在
+在 Xcode 中添加本仓库为 Package Dependency，并选择精确的 `0.6.5` Release。在
 `Package.swift` 中可使用：
 
 ```swift
 dependencies: [
     .package(
         url: "https://github.com/Jolibox-Developer/jolibox-ad-mediation-ios.git",
-        exact: "0.6.4"
+        exact: "0.6.5"
     ),
     .package(
         url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-        exact: "12.1.0"
+        exact: "12.14.0"
     ),
 ],
 targets: [
@@ -38,14 +38,15 @@ targets: [
 
 - iOS 13.0 及以上
 - Xcode / Swift Package Manager（Swift tools 5.9 及以上）
-- Google Mobile Ads SDK 严格使用 `12.1.0`
+- Google Mobile Ads SDK 严格使用 `12.14.0`，并由宿主应用 target 通过 Xcode SPM 直接添加
 - 在宿主应用 `Info.plist` 中配置 Google Mobile Ads App ID
 
-`0.6.4` XCFramework 使用 Xcode `26.4` 完成构建验收。Swift tools `5.9` 是
+`0.6.5` XCFramework 使用 Xcode `26.4` 完成构建验收。Swift tools `5.9` 是
 Package Manifest 的最低要求；其他 Xcode 版本未经单独测试时，不作已验收承诺。
 
-二进制 framework 会导入 `GoogleMobileAds`，所以宿主 target 必须同时加入上面所示的
-Google Mobile Ads package product；只解析 Jolibox package 并不是完整接入。
+XCFramework 将 Google Mobile Ads 作为仅实现依赖：公开 Swift interface 只暴露 Jolibox 自有
+类型，但其对象代码要求宿主 target 提供上面所示的唯一 `GoogleMobileAds` product。只解析
+Jolibox package 并不是完整接入；也不要在另一个二进制 framework 中嵌入第二份 Google Mobile Ads。
 
 在宿主 `Info.plist` 中配置 AdMob App ID。App ID 包含 `~`，不要误填包含 `/` 的
 广告位 ID。
@@ -78,7 +79,7 @@ JoliboxAds.initialize(
 
 ## 二进制校验
 
-`0.6.4` Release 包含 `JoliboxAdMediation.xcframework.zip`。其 Swift Package
+`0.6.5` Release 包含 `JoliboxAdMediation.xcframework.zip`。其 Swift Package
 校验和记录在 [Package.swift](Package.swift)，SHA-256 校验文件也随 Release 提供。
 
 ## 许可证

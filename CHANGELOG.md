@@ -2,6 +2,12 @@
 
 > 中文说明：[CHANGELOG_CN.md](CHANGELOG_CN.md)
 
+## 0.6.5
+
+- Makes Google Mobile Ads `12.14.0` an implementation-only dependency of the XCFramework.
+- Removes Google Mobile Ads and UMP types from the public Swift interface while preserving all Jolibox ad lifecycle callbacks.
+- Ships only Jolibox object code; Google Mobile Ads Objective-C classes remain external references resolved once by the host target.
+
 ## 0.6.4
 
 - Removes the stale archive-time code signature after adding distributable Swift interfaces, allowing each host to apply a fresh embedding signature.

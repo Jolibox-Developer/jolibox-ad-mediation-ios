@@ -2,6 +2,12 @@
 
 > English documentation: [CHANGELOG.md](CHANGELOG.md)
 
+## 0.6.5
+
+- 将 Google Mobile Ads `12.14.0` 作为 XCFramework 的仅实现依赖。
+- 从公开 Swift interface 中移除 Google Mobile Ads 与 UMP 类型，同时保持全部 Jolibox 广告生命周期回调不变。
+- 制品只包含 Jolibox 对象代码；Google Mobile Ads Objective-C 类仍为外部引用，由宿主 target 唯一解析。
+
 ## 0.6.4
 
 - 在加入可分发 Swift 接口后移除已失效的归档期代码签名，由宿主嵌入时重新签名。
