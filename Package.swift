@@ -10,8 +10,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "JoliboxAdMediation",
-            url: "https://github.com/Jolibox-Developer/jolibox-ad-mediation-ios/releases/download/0.6.5/JoliboxAdMediation.xcframework.zip",
-            checksum: "427dda9ac4ffb871ad34acbb10cea27f2783e80e683c15eb16df9296b8f4550d"
+            url: "https://github.com/Jolibox-Developer/jolibox-ad-mediation-ios/releases/download/0.6.6/JoliboxAdMediation.xcframework.zip",
+            checksum: "863cca2a631eb0fccc1f6bf841e572194e45b879742b02b7b3a85ed6628215a5"
         ),
     ]
 )

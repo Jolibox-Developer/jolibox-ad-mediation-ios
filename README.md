@@ -7,17 +7,17 @@ Binary-only Swift Package distribution of the Jolibox Ad Mediation iOS SDK.
 ## Install with Swift Package Manager
 
 In Xcode, add this repository as a package dependency and select the exact
-`0.6.5` release. In a `Package.swift` manifest:
+`0.6.6` release. In a `Package.swift` manifest:
 
 ```swift
 dependencies: [
     .package(
         url: "https://github.com/Jolibox-Developer/jolibox-ad-mediation-ios.git",
-        exact: "0.6.5"
+        exact: "0.6.6"
     ),
     .package(
         url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-        exact: "12.14.0"
+        exact: "12.1.0"
     ),
 ],
 targets: [
@@ -38,10 +38,10 @@ targets: [
 
 - iOS 13.0 or later
 - Xcode / Swift Package Manager with Swift tools 5.9 or later
-- Google Mobile Ads SDK exactly `12.14.0`, added directly to the host application target through Xcode SPM
+- Google Mobile Ads SDK exactly `12.1.0`, added directly to the host application target through Xcode SPM
 - Google Mobile Ads App ID configured in the host application's `Info.plist`
 
-The `0.6.5` XCFramework was built and verified with Xcode `26.4`. Swift tools
+The `0.6.6` XCFramework was built and verified with Xcode `26.4`. Swift tools
 `5.9` is the package-manifest minimum; other Xcode versions are not claimed as
 verified unless they have been tested separately.
 
@@ -83,7 +83,7 @@ JoliboxAds.initialize(
 
 ## Binary verification
 
-The `0.6.5` release contains `JoliboxAdMediation.xcframework.zip`. Its Swift
+The `0.6.6` release contains `JoliboxAdMediation.xcframework.zip`. Its Swift
 Package checksum is recorded in [Package.swift](Package.swift), and its SHA-256
 sidecar is attached to the release.
 

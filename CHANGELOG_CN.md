@@ -2,6 +2,11 @@
 
 > English documentation: [CHANGELOG.md](CHANGELOG.md)
 
+## 0.6.6
+
+- 将 XCFramework 重新构建为依赖 Google Mobile Ads `12.1.0`，同时保持由宿主通过 SPM 唯一提供依赖的设计。
+- 继续不在公开 Swift interface 中暴露 Google Mobile Ads 或 UMP 类型，也不在制品中定义 Google Mobile Ads Objective-C 类。
+
 ## 0.6.5
 
 - 将 Google Mobile Ads `12.14.0` 作为 XCFramework 的仅实现依赖。

@@ -2,6 +2,11 @@
 
 > 中文说明：[CHANGELOG_CN.md](CHANGELOG_CN.md)
 
+## 0.6.6
+
+- Rebuilds the XCFramework against Google Mobile Ads `12.1.0` while retaining the single host-provided SPM dependency design.
+- Keeps Google Mobile Ads and UMP types out of the public Swift interface and ships no Google Mobile Ads Objective-C class definitions.
+
 ## 0.6.5
 
 - Makes Google Mobile Ads `12.14.0` an implementation-only dependency of the XCFramework.
